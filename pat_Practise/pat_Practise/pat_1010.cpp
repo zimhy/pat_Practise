@@ -24,9 +24,9 @@ int formatChar2int (char c)
         return 0 ;
 }
 
-long getNumByStringAndRadix (string c_changeNum, int radix )
+    int  getNumByStringAndRadix (string c_changeNum,     int radix )
 {
-    long result = 0 ;
+    int result = 0 ;
     
     for (int i=0;i< c_changeNum.length();i++)
     {
@@ -35,9 +35,42 @@ long getNumByStringAndRadix (string c_changeNum, int radix )
     }
     return result ;
 }
+
+
+
+
+
+string binarySearch (unsigned long long l_baseNum ,string c_changeNum ,    int low,    int high)
+
+{
+        int  mid = (low + high ) /2 ;
+        int  l_changeNum = getNumByStringAndRadix(c_changeNum, mid) ;
+   // cout<<mid <<"-----"<<l_baseNum<<"---"<<l_changeNum<<endl;
+    if (l_changeNum == l_baseNum)
+    {
+        char t[255] ;
+        sprintf(t, "%d", mid);
+        return string(t);
+    }else{
+        if(low == high)
+            return "Impossible" ;
+        else{
+            if (l_changeNum > l_baseNum)
+            {
+                return binarySearch(l_baseNum, c_changeNum, low, mid-1);
+            }
+            else
+            {
+                return binarySearch(l_baseNum, c_changeNum, mid+1, high);
+            }
+        }
+    }
+    
+}
+
 string getRadix(string s_baseNum ,string s_changeNum ,int baseRadix)
 {
-    long l_baseNum = getNumByStringAndRadix(s_baseNum,baseRadix);
+        int  l_baseNum = getNumByStringAndRadix(s_baseNum,baseRadix);
     int minRadix = 2 ;
     for (int i = 0 ;i <s_changeNum.length() ;i++ )
     {
@@ -49,9 +82,11 @@ string getRadix(string s_baseNum ,string s_changeNum ,int baseRadix)
         }
     }
     stringstream ss;
-    for (int i = minRadix ; i < 36 ;i++)
+        int   high_Bound = 0 ;
+    bool breakFlag = true ;
+   for (int i = minRadix ; breakFlag ;i*=2)
     {
-        long l_temp = getNumByStringAndRadix(s_changeNum, i) ;
+            int l_temp = getNumByStringAndRadix(s_changeNum, i) ;
         if (l_temp == l_baseNum)
         {
             ss<<i ;
@@ -60,20 +95,42 @@ string getRadix(string s_baseNum ,string s_changeNum ,int baseRadix)
         {
             if ( l_temp > l_baseNum)
             {
-                return string ("Impossible") ;
+                high_Bound = i ;
+                breakFlag = false ;
             }
         }
     }
-    return  "Impossible" ;
+    
+    return binarySearch(l_baseNum, s_changeNum, high_Bound/2, high_Bound) ;
+  
+    /*
+    unsigned long long l_changeNum  = 0 ;
+    
+    while (l_changeNum < l_baseNum)
+    {
+        l_changeNum = getNumByStringAndRadix(s_changeNum, minRadix) ;
+        if (l_changeNum == l_baseNum)
+        {
+            stringstream ss ;
+            ss << minRadix ;
+            return ss.str();
+        }else{
+            minRadix ++ ;
+        }
+        
+    }
+    return "Impossible";
+     */
     
 }
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     string N1 ,N2 ,tag ;
     int radix ;
-    while(cin>>N1 >> N2 >> tag >> radix )
-    {
+    cin>>N1 >> N2 >> tag >> radix ;
+    
         if (formatChar2int(tag[0]) == 1)
         {
             cout << getRadix(N1, N2, radix) ;
@@ -82,6 +139,6 @@ int main(int argc, const char * argv[]) {
             cout << getRadix(N2, N1, radix) ;
         }
         
-    }
+    
     return 0;
 }
