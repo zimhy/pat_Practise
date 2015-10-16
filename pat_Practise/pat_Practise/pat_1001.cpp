@@ -38,7 +38,7 @@ string standardFormat (long input)
     return result ;
 }
 
-int main(int argc, const char * argv[]) {
+int main_1001(int argc, const char * argv[]) {
     // insert code here...
     long a , b ;
     while(cin>>a>>b)
