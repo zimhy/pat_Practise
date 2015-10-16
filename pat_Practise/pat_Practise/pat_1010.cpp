@@ -24,7 +24,7 @@ int formatChar2int (char c)
         return 0 ;
 }
 
-    int  getNumByStringAndRadix (string c_changeNum,     int radix )
+    unsigned long long   getNumByStringAndRadix (string c_changeNum,     unsigned long long radix )
 {
     int result = 0 ;
     
@@ -40,37 +40,41 @@ int formatChar2int (char c)
 
 
 
-string binarySearch (unsigned long long l_baseNum ,string c_changeNum ,    int low,    int high)
+string binarySearch (unsigned long long l_baseNum ,string c_changeNum ,    unsigned long long  low,    unsigned long long  high)
 
 {
-        int  mid = (low + high ) /2 ;
-        int  l_changeNum = getNumByStringAndRadix(c_changeNum, mid) ;
+    
+    unsigned long long   l_changeNum = 0 ;
    // cout<<mid <<"-----"<<l_baseNum<<"---"<<l_changeNum<<endl;
-    if (l_changeNum == l_baseNum)
+    for(;low<=high;)//二分搜索
     {
-        char t[255] ;
-        sprintf(t, "%d", mid);
-        return string(t);
-    }else{
-        if(low == high)
-            return "Impossible" ;
-        else{
-            if (l_changeNum > l_baseNum)
-            {
-                return binarySearch(l_baseNum, c_changeNum, low, mid-1);
+        unsigned long long  mid=(high+low)/2;
+        l_changeNum =  getNumByStringAndRadix(c_changeNum, mid) ;
+        if (l_changeNum==l_baseNum)
+        {
+            char  c_result [255] ;
+            sprintf(c_result, "%llu",mid) ;
+            return string(c_result) ;
+        }else
+            if(low == high)
+            {return "Impossible" ;}
+        else
+        {
+            if(l_changeNum > l_baseNum){
+                high = mid-1;
             }
-            else
-            {
-                return binarySearch(l_baseNum, c_changeNum, mid+1, high);
+            else{
+                low = mid ;
             }
         }
     }
     
+    return "Impossible" ;
 }
 
-string getRadix(string s_baseNum ,string s_changeNum ,int baseRadix)
+string getRadix(string s_baseNum ,string s_changeNum ,unsigned long long baseRadix)
 {
-        int  l_baseNum = getNumByStringAndRadix(s_baseNum,baseRadix);
+        unsigned long long   l_baseNum = getNumByStringAndRadix(s_baseNum,baseRadix);
     int minRadix = 2 ;
     for (int i = 0 ;i <s_changeNum.length() ;i++ )
     {
@@ -86,7 +90,7 @@ string getRadix(string s_baseNum ,string s_changeNum ,int baseRadix)
     bool breakFlag = true ;
    for (int i = minRadix ; breakFlag ;i*=2)
     {
-            int l_temp = getNumByStringAndRadix(s_changeNum, i) ;
+            unsigned long long  l_temp = getNumByStringAndRadix(s_changeNum, i) ;
         if (l_temp == l_baseNum)
         {
             ss<<i ;
