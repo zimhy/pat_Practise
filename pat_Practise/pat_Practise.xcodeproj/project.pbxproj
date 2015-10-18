@@ -10,6 +10,7 @@
 		311F0E9A1BD0A3EA00CFB6E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311F0E991BD0A3EA00CFB6E7 /* main.cpp */; };
 		311F0EA41BD0A81400CFB6E7 /* pat_1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311F0EA31BD0A81400CFB6E7 /* pat_1001.cpp */; };
 		311F0EA61BD0D7FF00CFB6E7 /* pat_1010.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311F0EA51BD0D7FF00CFB6E7 /* pat_1010.cpp */; };
+		319F53D31BD2633900B73E21 /* pat_1026.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 319F53D21BD2633900B73E21 /* pat_1026.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		311F0E991BD0A3EA00CFB6E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		311F0EA31BD0A81400CFB6E7 /* pat_1001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1001.cpp; sourceTree = "<group>"; };
 		311F0EA51BD0D7FF00CFB6E7 /* pat_1010.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1010.cpp; sourceTree = "<group>"; };
+		319F53D21BD2633900B73E21 /* pat_1026.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1026.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				311F0E991BD0A3EA00CFB6E7 /* main.cpp */,
 				311F0EA31BD0A81400CFB6E7 /* pat_1001.cpp */,
 				311F0EA51BD0D7FF00CFB6E7 /* pat_1010.cpp */,
+				319F53D21BD2633900B73E21 /* pat_1026.cpp */,
 			);
 			path = pat_Practise;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			files = (
 				311F0EA61BD0D7FF00CFB6E7 /* pat_1010.cpp in Sources */,
 				311F0E9A1BD0A3EA00CFB6E7 /* main.cpp in Sources */,
+				319F53D31BD2633900B73E21 /* pat_1026.cpp in Sources */,
 				311F0EA41BD0A81400CFB6E7 /* pat_1001.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +249,7 @@
 				311F0E9F1BD0A3EA00CFB6E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

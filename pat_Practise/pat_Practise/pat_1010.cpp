@@ -86,9 +86,9 @@ string getRadix(string s_baseNum ,string s_changeNum ,unsigned long long baseRad
         }
     }
     stringstream ss;
-        int   high_Bound = 0 ;
+    unsigned long long   high_Bound = 0 ;
     bool breakFlag = true ;
-   for (int i = minRadix ; breakFlag ;i*=2)
+   for (unsigned long long  i = minRadix ; breakFlag ;i*=2)
     {
             unsigned long long  l_temp = getNumByStringAndRadix(s_changeNum, i) ;
         if (l_temp == l_baseNum)
@@ -129,7 +129,7 @@ string getRadix(string s_baseNum ,string s_changeNum ,unsigned long long baseRad
 }
 
 
-int main(int argc, const char * argv[]) {
+int main_1010(int argc, const char * argv[]) {
     // insert code here...
     string N1 ,N2 ,tag ;
     int radix ;
