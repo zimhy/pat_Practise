@@ -175,8 +175,19 @@ int main(int argc, const char * argv[]) {
         cin >> time >> playTme >> isVip ;
         struct Player player {time ,playTme ,isVip == 1 } ;
         players.push_back(player) ;
-        
     }
+
+	cin >> tables_num;
+	int vip_tables_num;
+	cin >> vip_tables_num;
+	for (int i = 0; i < vip_tables_num; i++)
+	{
+
+	}
+
+
+
+
     
     
     return  0;

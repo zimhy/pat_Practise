@@ -53,7 +53,7 @@ string binarySearch (unsigned long long l_baseNum ,string c_changeNum ,    unsig
         if (l_changeNum==l_baseNum)
         {
             char  c_result [255] ;
-            sprintf(c_result, "%llu",mid) ;
+            sprintf_s(c_result, "%llu",mid) ;
             return string(c_result) ;
         }else
             if(low == high)
