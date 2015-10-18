@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="pat_1001.cpp" />
     <ClCompile Include="pat_1010.cpp" />
     <ClCompile Include="pat_1026.cpp" />
