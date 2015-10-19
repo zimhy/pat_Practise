@@ -150,6 +150,7 @@
     <ClCompile Include="pat_1001.cpp" />
     <ClCompile Include="pat_1010.cpp" />
     <ClCompile Include="pat_1026.cpp" />
+    <ClCompile Include="pat_1039.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

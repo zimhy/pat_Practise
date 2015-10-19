@@ -240,7 +240,7 @@ void handle_free_table(Event &event)
 
 
 
-int main(int argc, const char * argv[]) {
+int main_1026(int argc, const char * argv[]) {
 	cin >> players_num;
 	for (int i = 0; i < players_num; i++)
 	{
