@@ -30,6 +30,7 @@
 		311F0E991BD0A3EA00CFB6E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		311F0EA31BD0A81400CFB6E7 /* pat_1001.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1001.cpp; sourceTree = "<group>"; };
 		311F0EA51BD0D7FF00CFB6E7 /* pat_1010.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1010.cpp; sourceTree = "<group>"; };
+		31467CF41BD5DD2400D5B4A1 /* pat_1055.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1055.cpp; sourceTree = "<group>"; };
 		319F53D21BD2633900B73E21 /* pat_1026.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pat_1026.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +68,7 @@
 				311F0EA31BD0A81400CFB6E7 /* pat_1001.cpp */,
 				311F0EA51BD0D7FF00CFB6E7 /* pat_1010.cpp */,
 				319F53D21BD2633900B73E21 /* pat_1026.cpp */,
+				31467CF41BD5DD2400D5B4A1 /* pat_1055.cpp */,
 			);
 			path = pat_Practise;
 			sourceTree = "<group>";
