@@ -19,7 +19,7 @@ using namespace std;
 
 bool matrix_c_s[40000][2500];
 
-int main(int argc, const char * argv[]) {
+int main_1039(int argc, const char * argv[]) {
 	int amount_stu;
 	int amount_course;
 	cin >> amount_stu >> amount_course;
