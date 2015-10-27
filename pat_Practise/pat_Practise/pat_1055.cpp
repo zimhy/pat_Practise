@@ -42,7 +42,7 @@ struct Case
 
 };
 
-int main (int argc, const char * argv[])
+int main__1055 (int argc, const char * argv[])
 {
 	vector <Person> persons;
 	vector <Case> cases;
@@ -112,4 +112,5 @@ int main (int argc, const char * argv[])
 	}
 	system("PAUSE");
 	//system.
+	return 0;
 }
