@@ -188,7 +188,7 @@ bool compare_car (const Car &a ,const Car &b )
 }
 
 
-int main(int argc, const char * argv[])
+int main_1095(int argc, const char * argv[])
 {
 	priority_queue <Event ,vector<Event> ,cmp_event> event_queue;
 	map<string, Car > map_car;
