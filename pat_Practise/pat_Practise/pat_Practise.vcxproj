@@ -101,7 +101,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -149,6 +149,7 @@
     <ClCompile Include="1018.cpp" />
     <ClCompile Include="1060.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pat_1052.cpp" />
     <ClCompile Include="pat_1095.cpp" />
     <ClCompile Include="pat_1001.cpp" />
     <ClCompile Include="pat_1010.cpp" />
